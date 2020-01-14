@@ -1,0 +1,93 @@
+- var name = '@impulse'
+doctype html
+html
+  head
+    meta(http-equiv="content-type" content="text/html; charset=UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(property="og:title" content="Личная ифнормация")
+    meta(property="og:url" content="http://anketa.ru/")
+    title Анкета
+  body
+    header.header#header
+      nav.header__nav
+        ul.header__nav__ul
+          li.header__nav__ul__li
+            a.active(href="#main__form__fieldset__first") Личная ифнормация
+          li.header__nav__ul__li
+            a(href="#main__form__fieldset__second") Опыт
+          li.header__nav__ul__li
+            a(href="#main__form__fieldset__third") JavaScript
+          li.header__nav__ul__li
+            a(href="#main__form__fieldset__fourth") О себе
+    main.main
+      h1.main__h1 АНКЕТА
+      form.main__form(action="")
+        fieldset.main__form__fieldset__first#main__form__fieldset__first
+          img.main__form__fieldset__first__icones(src="/img/first_icone.svg", alt="")
+          h2.main__form__fieldset__first__legend.legends Личная информация
+          <input class="main__form__fieldset__first__name s" id="#main__form__fieldset__first__name" placeholder="ФИО" type="text" name="name" />
+          select.main__form__fieldset__first__birthday.m#main__form__fieldset__first__birthday(name="birthday")
+            option.hidden(selected) Год рождения
+            option.birthday__opt(value="1998") 1998
+            option.birthday__opt(value="1997") 1997
+            option.birthday__opt(value="1996") 1996
+            option.birthday__opt(value="1995") 1995
+            option.birthday__opt(value="1994") 1994
+            option.birthday__opt(value="1993") 1993
+            option.birthday__opt(value="1992") 1992
+            option.birthday__opt(value="1991") 1991
+          <input class="main__form__fieldset__first__address s" id="#main__form__fieldset__first__address" placeholder="Место проживания" type="text" name="address" />
+          <input class="main__form__fieldset__first__skype s" id="#main__form__fieldset__first__skype" placeholder="Skype" type="text" name="skype" />
+          <input class="main__form__fieldset__first__mail s" id="#main__form__fieldset__first__mail" placeholder="E-mail" type="email" name="mail" />
+
+        fieldset.main__form__fieldset__second#main__form__fieldset__second
+          img.main__form__fieldset__second__icones(src="/img/second_icone.svg", alt="")
+          h2.main__form__fieldset__second__legend.legends Расскажите о своём опыте
+          div.main__form__fieldset__checkbox-container
+            div.first
+              label
+                <input type="checkbox" class="main__form__fieldset__checkbox__item" value="1" name="BEMCSS" /> Tiger
+              label
+                <input type="checkbox" class="main__form__fieldset__checkbox__item" value="2" name="STYLUSSASS" /> Stylus/LESS/SASS
+              label
+                <input type="checkbox" class=".main__form__fieldset__checkbox__item" value="3" name="SVG" /> Работаю с SVG
+
+            div.second
+              label
+                <input type="checkbox" class="main__form__fieldset__checkbox__item" value="1" name="semantics" /> Верстаю семантично
+              label
+                <input type="checkbox" class="main__form__fieldset__checkbox__item" value="2" name="es2015-2016" /> ES2015/ES2016
+              label
+                <input type="checkbox" class="main__form__fieldset__checkbox__item" value="3" name="Gulp-grant" /> GULP/GRUNT
+
+            div.third
+              label
+                <input type="checkbox" class="main__form__fieldset__checkbox__item" value="1" name="semantics" /> Webpack
+              label
+                <input type="checkbox" class="main__form__fieldset__checkbox__item" value="2" name="es2015-2016" /> jQuery
+              label
+                <input type="checkbox" class="main__form__fieldset__checkbox__item" value="3" name="Gulp-grant" /> Использую GIT
+
+        fieldset.main__form__fieldset__third#main__form__fieldset__third
+          img.main__form__fieldset__third__icones(src="/img/third_icone.svg", alt="")
+          h2.main__form__fieldset__third__legend.legends Уровень владения JavaScript
+          ul.main__form__filedset__lavel
+            li Не владею
+            li Использую готовые решения
+            li Использую готовые решения и умею их переделывать
+            li Пишу сложный JS с нуля
+          <input type="range" step="5" min="0" max="15" list="lavellist" onchange="document.getElementById('rangeValue').innerHTML = this.value;">
+          <datalist id="rangeList">
+            <option value="Не владею" label="0">
+            <option value="Использую готовые решения" label="5">
+            <option value="Использую готовые решения и умею их переделывать" label="10">
+            <option value="Пишу сложный JS с нуля" label="15">
+          </datalist>
+
+        fieldset.main__form__fieldset__fourth#main__form__fieldset__fourth
+          img.main__form__fieldset__fourth__icones(src="/img/fourth_icone.svg", alt="")
+          h2.main__form__fieldset__fourth__legend.legends Расскажите о себе
+          p.main__form__fieldset__fourth__p Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+          textarea.main__form__fieldset__textarea(placeholder="Понравилась тем, что..." name="aboutyou")
+          
+      <input class="main__submit__button" type="submit" value="Готово"/>

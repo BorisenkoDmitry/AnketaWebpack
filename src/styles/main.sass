@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=cyrillic');
+
+$font-stack: Roboto
+$primary-color: #000
+$h2-color: #1c1c1c
+
+body
+  font: 100% $font-stack
+  color: $primary-color
+
+
+
+.main__form
+  .main__form__fieldset__first, .main__form__fieldset__fourth
+    max-width: 520px;
+    margin: 0 auto;
+  .main__form__fieldset__second, .main__form__fieldset__third
+    max-width: 770px;
+    margin: 0 auto;
+
+
+.main__form
+  fieldset
+    display: flex;
+    flex-direction: column;
+  input, textarea, select
+    margin: 0 auto;
+
+.main
+  padding-top: 130px;
+  background-image: url(/img/back.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  img
+    margin: 73px auto;
+
+.main__h1
+    font-weight: 100;
+    font-size: 70px;
+    text-align: center;
+    margin: 0px;
+
+.legends
+  font-size: 30px;
+  font-weight: 300;
+  color: $h2-color;
+  margin: 30px auto;
+  text-align: center;
+
+.main__form__fieldset__first
+  .s
+    width: 500px;
+    padding: 20px 0px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 400;
+
+  .m 
+    width: 320px;
+    padding: 20px 0px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #c8c8c8;
+
+.birthday__opt
+  color: #435993;
+  font-size: 20px;
+  font-weight: 300;
+
+    
+      
+
+.main__form__fieldset__checkbox-container
+  display: flex;
+  justify-content: space-between;
+  div
+    display: flex;
+    flex-direction: column;
+    label
+      margin-bottom: 15px;
+
+
+.main__form__fieldset__textarea
+  width: 480px;
+  height: 180px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+
+.main__form__fieldset__fourth
+  text-align: center;
+  &__p 
+    margin-bottom: 35px;
+
+.main__submit__button
+  padding: 18px 33px;
+  background-color: #435993;
+  border: 0px;
+  border-radius: 10px;
+  color: #fff;
+  margin: 60px auto;
+  display: block;
+  cursor: pointer;
